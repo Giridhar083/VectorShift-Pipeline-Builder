@@ -18,7 +18,7 @@ services:
     staticPublishPath: build
     envVars:
       - key: REACT_APP_API_URL
-        value: https://vectorshift-backend.onrender.com
+        value: https://vectorshift-backend-i0vu.onrender.com
     routes:
       - type: rewrite
         source: /*
