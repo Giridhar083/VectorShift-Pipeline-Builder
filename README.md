@@ -78,16 +78,3 @@ In `nodes/textNode.js`:
 - `backend/main.py` counts nodes/edges and runs a DFS-based cycle check to determine if the graph is a DAG, returning `{ num_nodes, num_edges, is_dag }`.
 - The frontend shows the result in a modal with node/edge counts and a pass/fail DAG indicator.
 
-## Deployment (Render)
-
-`render.yaml` at the project root defines both services as a Render Blueprint.
-
-1. Push this repo to GitHub.
-2. On Render: New → Blueprint → connect the repo.
-3. Render deploys `backend` (FastAPI) and `frontend` (static build) separately.
-4. Copy the backend's live URL and update:
-   - `allow_origins` in `backend/main.py`
-   - `REACT_APP_API_URL` in `frontend/.env.production`
-5. Push again — Render redeploys automatically.
-
-No authentication is implemented, matching the assignment's scope.
